@@ -1,0 +1,585 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: #eaeaea;
+	color: maroon;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Poppins", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+	transition: all 0.35s;
+	margin-top: 25px;
+}
+
+@media (max-width: 1199px) {
+	#main {
+		padding: 1vw;
+	}
+}
+
+.title-menu {
+	color: #212121;
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Page Title
+--------------------------------------------------------------*/
+.pagetitle {
+	margin-bottom: 10px;
+}
+
+.pagetitle h1 {
+	font-size: 24px;
+	margin-bottom: 0;
+	font-weight: 600;
+	color: #ce1212;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: 15px;
+	z-index: 99999;
+	background: #ce1212;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	transition: all 0.4s;
+}
+
+.back-to-top i {
+	font-size: 24px;
+	color: #fff;
+	line-height: 0;
+}
+
+.back-to-top:hover {
+	background: #930000;
+	color: #fff;
+}
+
+.back-to-top.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Override some default Bootstrap stylings
+--------------------------------------------------------------*/
+
+/* Dropdown menus */
+.dropdown-menu {
+	border-radius: 4px;
+	padding: 10px 0;
+	animation-name: dropdown-animate;
+	animation-duration: 0.2s;
+	animation-fill-mode: both;
+	border: 0;
+	box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
+}
+
+.dropdown-menu .dropdown-header,
+.dropdown-menu .dropdown-footer {
+	text-align: center;
+	font-size: 15px;
+	padding: 10px 25px;
+}
+
+.dropdown-menu .dropdown-footer a {
+	color: #444444;
+	text-decoration: underline;
+}
+
+.dropdown-menu .dropdown-footer a:hover {
+	text-decoration: none;
+}
+
+.dropdown-menu .dropdown-divider {
+	color: #a5c5fe;
+	margin: 0;
+}
+
+.dropdown-menu .dropdown-item {
+	font-size: 14px;
+	padding: 5px 15px;
+	transition: 0.3s;
+}
+
+.dropdown-menu .dropdown-item i {
+	margin-right: 10px;
+	font-size: 18px;
+	line-height: 0;
+}
+
+.dropdown-menu .dropdown-item:hover {
+	background-color: #f6f9ff;
+}
+
+@media (min-width: 768px) {
+	.dropdown-menu-arrow::before {
+		content: "";
+		width: 13px;
+		height: 13px;
+		background: #fff;
+		position: absolute;
+		top: -7px;
+		right: 20px;
+		transform: rotate(45deg);
+		border-top: 1px solid #eaedf1;
+		border-left: 1px solid #eaedf1;
+	}
+}
+
+@keyframes dropdown-animate {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+	0% {
+		opacity: 0;
+	}
+}
+
+/* Light Backgrounds */
+.bg-primary-light {
+	background-color: #cfe2ff;
+	border-color: #cfe2ff;
+}
+
+.bg-secondary-light {
+	background-color: #e2e3e5;
+	border-color: #e2e3e5;
+}
+
+.bg-success-light {
+	background-color: #d1e7dd;
+	border-color: #d1e7dd;
+}
+
+.bg-danger-light {
+	background-color: #f8d7da;
+	border-color: #f8d7da;
+}
+
+.bg-warning-light {
+	background-color: #fff3cd;
+	border-color: #fff3cd;
+}
+
+.bg-info-light {
+	background-color: #cff4fc;
+	border-color: #cff4fc;
+}
+
+.bg-dark-light {
+	background-color: #f3f3f3;
+	border-color: #d3d3d4;
+}
+
+.bg-dark-ewakopi {
+	background-color: maroon;
+	border-color: #d3d3d4;
+}
+
+/* h5 */
+.card {
+	border-radius: 30px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+	padding: 0;
+	border: none;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.card-header {
+	border-color: #ebeef4;
+	background-color: #fff;
+	/*color: #798eb3;*/
+	color: #ce1212;
+	padding: 10px;
+}
+
+.card-footer {
+	list-style: none;
+	text-align: start;
+}
+
+.card-title {
+	font-size: 1.3rem;
+	font-weight: 600;
+	/* color: #ce1212; */
+	color: maroon;
+	font-family: "Poppins", sans-serif;
+}
+
+.card-title span {
+	color: #400000;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.card-body > .container-fluid ul li {
+	font-size: 0.9rem;
+	font-weight: 400;
+	border: 0px;
+}
+
+/* card text in footer card */
+.card-text {
+	font-size: 14px;
+	display: inline;
+	background-color: #df0c0ccf;
+	color: #fff;
+	border-radius: 4px;
+	padding: 0 3px 0 3px;
+	font-family: "Poppins", sans-serif;
+}
+
+.card-img-overlay {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-img-top {
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	margin-top: auto;
+	padding: 15px;
+	max-width: 400px;
+}
+
+.card-img-blank {
+	border-radius: 50px;
+	padding: 95px;
+	object-fit: contain;
+}
+
+.card-body {
+	align-self: flex-start;
+	padding: 25px;
+	margin-top: -15px;
+}
+
+.card-text-desc {
+	flex-grow: 1;
+	font-size: 0.8rem;
+}
+
+.btn-primary {
+	border-radius: 4px;
+}
+.btn-primary:hover {
+	background-color: rgb(89, 89, 89);
+	border: none;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.logo {
+	line-height: 1;
+}
+
+@media (min-width: 1200px) {
+	.logo {
+		width: 280px;
+	}
+}
+
+.logo img {
+	max-height: 26px;
+	margin-right: 6px;
+}
+
+.logo span {
+	font-size: 26px;
+	font-weight: 700;
+	/*color: #012970;*/
+	color: #ce1212;
+	font-family: "Nunito", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header Nav
+--------------------------------------------------------------*/
+.header-nav ul {
+	list-style: none;
+}
+
+.header-nav > ul {
+	margin: 0;
+	padding: 0;
+}
+
+.header-nav .nav-icon {
+	font-size: 22px;
+	color: #012970;
+	margin-right: 25px;
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+# Error 404
+--------------------------------------------------------------*/
+.error-404 {
+	padding: 30px;
+}
+
+.error-404 h1 {
+	font-size: 180px;
+	font-weight: 700;
+	color: #4154f1;
+	margin-bottom: 0;
+	line-height: 150px;
+}
+
+.error-404 h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: #012970;
+	margin-bottom: 30px;
+}
+
+.error-404 .btn {
+	background: #51678f;
+	color: #fff;
+	padding: 8px 30px;
+}
+
+.error-404 .btn:hover {
+	background: #3e4f6f;
+}
+
+@media (min-width: 992px) {
+	.error-404 img {
+		max-width: 50%;
+	}
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+.footer {
+	bottom: 0;
+	width: 100%;
+	align-items: center;
+
+	transition: all 0.3s;
+	font-size: 12px;
+	background-color: #242427;
+	padding: 20px;
+	color: #ffffff;
+	/*color: rgba(255, 255, 255, 0.7); */
+}
+
+.footer .container .row {
+	font-size: smaller;
+	padding: 0 0;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.footer > .container {
+	background-color: #242427;
+}
+
+.footer .icon {
+	margin-right: 10px;
+	font-size: 18px;
+	line-height: 0;
+}
+
+.footer h4 {
+	font-size: 14px;
+	font-weight: bold;
+	position: relative;
+	padding-bottom: 2px;
+	color: #fffddd;
+}
+
+.footer .footer-links {
+	margin-bottom: 10px;
+}
+
+.footer .footer-links ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer .footer-links ul li {
+	padding: 5px 0;
+	display: flex;
+	align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+	padding-top: 0;
+}
+
+.footer .footer-links ul a {
+	color: rgba(255, 255, 255, 0.6);
+	transition: 0.3s;
+	display: inline-block;
+	line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+	/* color: #fff;*/
+	color: #fff;
+}
+
+.footer .copyright {
+	text-align: center;
+	font-size: 0.75rem;
+	font-weight: 300;
+	padding-top: 10px;
+	border-top: 1px solid rgba(255, 255, 255, 0.68);
+}
+
+.footer .credits {
+	padding-top: 4px;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+
+	/** color: #cddfff; **/
+}
+
+.footer a {
+	/** color: #cddfff; **/
+	color: #fff;
+}
+
+.footer .credits a {
+	color: #ffffffcd;
+	font-weight: 300;
+	font-size: 11px;
+}
+
+/*--------------------------------------------------------------
+# offCanvasNavbar custom css
+--------------------------------------------------------------*/
+
+body {
+	overflow-x: hidden;
+	/* Prevent scroll on narrow devices */
+}
+
+@media (max-width: 991.98px) {
+	.offcanvas-collapse {
+		position: fixed;
+		top: 50px;
+		/* Height of navbar */
+		bottom: 0;
+		left: 100%;
+		width: 100%;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		overflow-y: auto;
+		visibility: hidden;
+		background-color: #423c3d;
+		transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	}
+
+	.offcanvas-collapse.open {
+		visibility: visible;
+		transform: translateX(-100%);
+	}
+}
+
+.pagetitle {
+	padding: 15px;
+	margin: 0 auto 0 auto;
+}
+
+/*--------------------------------------------------------------
+# brandtitle style
+--------------------------------------------------------------*/
+
+.brandtitle {
+	font-size: 1rem;
+	padding: 0 5px 0 5px;
+	color: #ffffff;
+	font-weight: 500;
+	align-items: center;
+}
+
+.brandtitle span {
+	font-size: 0.9rem;
+	background-color: maroon;
+	padding: 0 5px 0px 5px;
+	color: #ffffff;
+	font-weight: 500;
+}
+
+/*costumize additional card menu*/
+
+/* add cutom animation toggler icon */
+
+.navbar-toggler .navbar-toggler-icon {
+	transition: transform 0.3s ease-in-out;
+	outline: none;
+	box-shadow: none;
+	border: 0;
+	position: relative;
+	transition: 0.25s ease-in-out;
+	border-radius: 1px;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+	outline: none;
+	box-shadow: none;
+	border: 0;
+	position: relative;
+}
